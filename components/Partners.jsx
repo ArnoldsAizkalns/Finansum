@@ -1,4 +1,10 @@
 import Image from 'next/image'
+import maponImg from '/public/assets/partners/MaponNew1.png'
+import mollerImg from '/public/assets/partners/Moller.png'
+import sherlogImg from '/public/assets/partners/Sherlog.png'
+import skandiImg from '/public/assets/partners/SkandiMotors.png'
+import autobravaImg from '/public/assets/partners/autoBrava.png'
+import porscheImg from '/public/assets/partners/porsche.png'
 
 const Partners = () => {
 	return (
@@ -13,72 +19,42 @@ const Partners = () => {
 					<div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
 						<a href='https://porsche.lv/'>
 							<div className='flex h-[65px] flex-col items-center justify-center m-auto'>
-								<Image
-									src='/../public/assets/partners/porsche.png'
-									alt='/'
-									width='200'
-									height='200'
-								/>
+								<Image src={porscheImg} alt='/' width='200' height='200' />
 							</div>
 						</a>
 					</div>
 					<div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
 						<a href='https://www.skandimotors.lv/'>
 							<div className='flex h-[65px] flex-col items-center justify-center h-m-[25px] m-auto'>
-								<Image
-									src='/../public/assets/partners/SkandiMotors.png'
-									alt='/'
-									width='150'
-									height='200'
-								/>
+								<Image src={skandiImg} alt='/' width='150' height='200' />
 							</div>
 						</a>
 					</div>
 					<div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
 						<a href='https://mollerauto.lv/'>
 							<div className='flex h-[65px] flex-col items-center justify-center m-auto'>
-								<Image
-									src='/../public/assets/partners/Moller.png'
-									alt='/'
-									width='200'
-									height='200'
-								/>
+								<Image src={mollerImg} alt='/' width='200' height='200' />
 							</div>
 						</a>
 					</div>
 					<div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
 						<a href='https://www.sherloglatvia.com/'>
 							<div className='flex flex-col items-center justify-center h-[65px] m-auto'>
-								<Image
-									src='/../public/assets/partners/Sherlog.png'
-									alt='/'
-									width='150'
-									height='150'
-								/>
+								<Image src={sherlogImg} alt='/' width='150' height='150' />
 							</div>
 						</a>
 					</div>
 					<div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
 						<a href='https://www.autobrava.lv/'>
 							<div className='flex h-[65px] flex-col items-center justify-center m-auto'>
-								<Image
-									src='/../public/assets/partners/autoBrava.png'
-									alt='/'
-									width='200'
-									height='200'
-								/>
+								<Image src={autobravaImg} alt='/' width='200' height='200' />
 							</div>
 						</a>
 					</div>
 					<div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
 						<a href='https://www.mapon.com/lv'>
 							<div className='flex h-[65px] flex-col items-center justify-center m-auto'>
-								<Image
-									src='/../public/assets/partners/MaponNew1.png'
-									alt='/'
-									width='150'
-									height='200'
-								/>
+								<Image src={maponImg} alt='/' width='150' height='200' />
 							</div>
 						</a>
 					</div>

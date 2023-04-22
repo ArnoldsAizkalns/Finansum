@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import taycanImg from '/public/assets/porscheHD.jpg'
+
 const About = () => {
 	return (
-		<div id='about' className='flex items-center w-full p-2 md:h-screen '>
+		<div id='about' className='flex items-center w-full p-2  md:h-screen'>
 			<div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
 				<div className='col-span-2'>
 					<p className='uppercase text-xl tracking-widest text-[#4dac45]'>
@@ -27,7 +29,7 @@ const About = () => {
 				</div>
 				<div className='flex items-center justify-center w-full h-auto p-0 m-auto ease-in shadow-xl rounded-xl shadow-gray-400 hover:scale-105 duration-250'>
 					<Image
-						src='/../public/assets/porscheHD.jpg'
+						src={taycanImg}
 						alt='/'
 						width='650'
 						height='230'

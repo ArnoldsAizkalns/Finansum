@@ -1,4 +1,5 @@
 import About from '@/components/About'
+import Calculator from '@/components/calc/Calculator'
 import Contact from '@/components/Contact'
 import Header from '@/components/Header.jsx'
 import Main from '@/components/Main'
@@ -13,6 +14,7 @@ export default function Home() {
 			<Partners />
 			<About />
 			<Projects />
+			<Calculator />
 			<Contact />
 		</>
 	)

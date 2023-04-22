@@ -3,10 +3,25 @@ import Link from 'next/link'
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai'
 import { FaFacebook, FaInstagram } from 'react-icons/fa'
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
+import contactImg from '/public/assets/HandsMac.png'
 
 const Contact = () => {
+	async function handleOnSubmit(e) {
+		e.preventDefault()
+		const formData = {}
+		Array.from(e.currentTarget.elements).forEach(field => {
+			if (!field.name) return
+			formData[field.name] = field.value
+		})
+		fetch('/api/mail', {
+			method: 'post',
+			body: JSON.stringify(formData),
+		})
+		console.log(formData)
+	}
+
 	return (
-		<div id='contact' className='w-full h-screen pt-[85px]'>
+		<div id='contact' className='w-full h-screen mt-[150px]'>
 			<div className='max-w-[1240px] m-auto px-2 w-full '>
 				<p className='text-xl tracking-widest uppercase text-[#4dac45]'>
 					Contact
@@ -19,7 +34,7 @@ const Contact = () => {
 							<div className='flex justify-center'>
 								<Image
 									className='duration-300 ease-in rounded-xl hover:scale-105'
-									src='/../public/assets/HandsMac.png'
+									src={contactImg}
 									alt='/'
 									width={550}
 									height={400}
@@ -54,13 +69,14 @@ const Contact = () => {
 					{/* right */}
 					<div className='h-auto col-span-1 shadow-gray-400 rounded-xl lg:p-4'>
 						<div className='p-4'>
-							<form>
+							<form method='post' onSubmit={handleOnSubmit}>
 								<div className='grid w-full gap-4 py-2 md:grid-cols-2'>
 									<div className='flex flex-col'>
 										<label className='py-2 text-sm uppercase'>Name</label>
 										<input
 											className='flex p-3 border-2 border-gray-300 rounded-lg'
 											type='text'
+											name='name'
 										/>
 									</div>
 									<div className='flex flex-col'>
@@ -69,7 +85,8 @@ const Contact = () => {
 										</label>
 										<input
 											className='flex p-3 border-2 border-gray-300 rounded-lg'
-											type='text'
+											type='number'
+											name='number'
 										/>
 									</div>
 								</div>
@@ -77,7 +94,8 @@ const Contact = () => {
 									<label className='py-2 text-sm uppercase'>E-mail</label>
 									<input
 										className='flex p-3 border-2 border-gray-300 rounded-lg'
-										type='text'
+										type='email'
+										name='email'
 									/>
 								</div>
 								<div className='flex flex-col py-2'>
@@ -85,6 +103,7 @@ const Contact = () => {
 									<input
 										className='flex p-3 border-2 border-gray-300 rounded-lg'
 										type='text'
+										name='subject'
 									/>
 								</div>
 								<div className='flex flex-col py-2'>
@@ -92,6 +111,7 @@ const Contact = () => {
 									<textarea
 										className='p-3 border-2 border-gray-300 rounded-lg'
 										rows='10'
+										name='message'
 									/>
 								</div>
 								<button className='w-full mt-[30px] p-4 text-gray-100 from-[#4dac45] to-[#22255f] '>
