@@ -1,11 +1,8 @@
 function FormInputGroup({
 	text,
 	icon,
-	placeholder,
-	value,
-	onInput,
-	onKeyUp,
-	readonly = false,
+	readOnly = false,
+	...rest
 }) {
 	return (
 		<div className='mb-3 input-group '>
@@ -17,12 +14,9 @@ function FormInputGroup({
 			</span>
 			<input
 				className='w-[240px] px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline'
-				value={value}
-				placeholder={placeholder}
 				type='number'
-				onInput={onInput}
-				onKeyUp={onKeyUp}
-				readOnly={readonly}
+				readOnly={readOnly}
+				{...rest}
 			/>
 		</div>
 	)
